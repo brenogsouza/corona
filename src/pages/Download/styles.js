@@ -1,25 +1,35 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: flex;
-  height: 100vh;
   width: 100%;
-  max-width: 512px;
+  max-width: 1120px;
+  height: 100vh;
   margin: 0 auto;
 
-  flex-direction: column;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
+  img {
+    margin: auto;
+  }
+`;
+export const Section = styled.div`
+  width: 100%;
+  max-width: 380px;
+  margin: auto;
   h1 {
-    margin: 50px 0 30px;
-    font-size: 7.2rem;
+    margin: 65px 0 32px;
+    font-size: 50px;
     color: #061a40;
   }
 
   p {
-    font-size: 2.1rem;
+    font-size: 18px;
     color: #737380;
     line-height: 30px;
+  }
+  section .Link {
+    color: black;
   }
 `;
