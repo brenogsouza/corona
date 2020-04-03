@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import BackgroundImage from '../../assets/img/bg.jpg';
+import BackgroundImage from '../../assets/img/bg2.jpg';
 
 export const Container = styled.section`
   height: 100vh;
