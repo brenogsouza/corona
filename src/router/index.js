@@ -15,7 +15,7 @@ const Routes = () => (
 
       <Route path="/world" component={WorldPage} />
       <Route path="/state" component={StatePage} exact />
-      <Route path="/state/:state" component={InformationStatePage} />
+      <Route path="/state/:uf" component={InformationStatePage} />
 
       <Route path="/news" component={NewsPage} />
       <Route path="/download" component={DownloadPage} />
