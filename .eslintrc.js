@@ -39,6 +39,7 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'react/jsx-one-expression-per-line': 'off',
+    'no-nested-ternary': 'off',
     'no-unused-expressions': 'off',
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
