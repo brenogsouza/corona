@@ -1,7 +1,7 @@
 import React from 'react';
+import { FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
-import { FiArrowRight } from 'react-icons/fi';
 import Layout from '~/layouts/Default';
 
 import { Container, Content, ButtonsContainer } from './styles';
@@ -13,7 +13,7 @@ const HomePage = () => (
         <h1>CORONAVÍRUS</h1>
         <span>COVID-19</span>
         <ButtonsContainer>
-          <Link to="/registrations">
+          <Link to="/state">
             Selecionar Estado <FiArrowRight size={30} />
           </Link>
         </ButtonsContainer>
