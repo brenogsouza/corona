@@ -34,7 +34,6 @@ export const Section = styled.div`
 export const ButtonsContainer = styled.div`
   margin-top: 55px;
 
-
   a {
     color: #061a40;
     display: flex;

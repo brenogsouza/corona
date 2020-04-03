@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
-
-import { Container, Section, ButtonsContainer } from './styles';
+import { Link } from 'react-router-dom';
 
 import LogoQR from '../../assets/img/qrcode.png';
+import { Container, Section, ButtonsContainer } from './styles';
 
 const DownloadPage = () => (
   <Container>
