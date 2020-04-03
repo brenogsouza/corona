@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 import Layout from '~/layouts/Default';
 
-
 import { Container, Content, ButtonsContainer } from './styles';
 
 const HomePage = () => (

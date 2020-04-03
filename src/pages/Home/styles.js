@@ -33,11 +33,14 @@ export const Content = styled.div`
 
   span {
     color: #ed3124;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #b9d6f2;
   }
 `;
 
 export const ButtonsContainer = styled.div`
-  margin-top: 70px;
+  margin-top: 55px;
 
   a {
     display: flex;
