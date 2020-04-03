@@ -1,17 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Layout from '~/layouts/Information';
 
-import { Container, Content } from './styles';
+import api from '~/services/api';
+
+import { Container, StatesContainer, StateItem } from './styles';
 
 const MyStatePage = () => {
+  const [states, setStates] = useState([]);
+
+  useEffect(() => {
+    async function getStates() {
+      const { data } = await api.get('').then((r) => r.data);
+
+      setStates(data);
+    }
+
+    getStates();
+  }, []);
+
   return (
     <Layout>
       <Container>
-        <Content>
-          <h1>COVID-19</h1>
-          <span>Dados no seu estado - Mato grosso do Sul</span>
-        </Content>
+        <StatesContainer>
+          {states.map((state) => (
+            <StateItem key={state.state}>
+              <Link to={`/state/${state.uf}`}>
+                <span>{state.state}</span>
+                <img
+                  src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
+                  alt={state.state}
+                />
+              </Link>
+            </StateItem>
+          ))}
+        </StatesContainer>
       </Container>
     </Layout>
   );
