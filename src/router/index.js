@@ -5,6 +5,7 @@ import DownloadPage from '~/pages/Download';
 import HomePage from '~/pages/Home';
 import NewsPage from '~/pages/News';
 import StatePage from '~/pages/State';
+import InformationStatePage from '~/pages/State/Information';
 import WorldPage from '~/pages/World';
 
 const Routes = () => (
@@ -12,11 +13,11 @@ const Routes = () => (
     <Switch>
       <Route path="/" component={HomePage} exact />
 
-      <Route path="/news" component={NewsPage} />
-      <Route path="/state" component={StatePage} />
-
       <Route path="/world" component={WorldPage} />
+      <Route path="/state" component={StatePage} exact />
+      <Route path="/state/:state" component={InformationStatePage} />
 
+      <Route path="/news" component={NewsPage} />
       <Route path="/download" component={DownloadPage} />
 
       <Redirect to="/404" />
