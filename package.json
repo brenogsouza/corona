@@ -28,6 +28,7 @@
     ]
   },
   "dependencies": {
+    "@nivo/bar": "^0.61.1",
     "@rocketseat/unform": "^1.6.2",
     "axios": "^0.19.2",
     "react": "^16.13.1",
