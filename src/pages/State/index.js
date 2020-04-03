@@ -14,7 +14,11 @@ const MyStatePage = () => {
     async function getStates() {
       const { data } = await api.get('').then((r) => r.data);
 
-      setStates(data);
+      setStates(
+        data.sort((a, b) =>
+          a.state > b.state ? 1 : b.state > a.state ? -1 : 0,
+        ),
+      );
     }
 
     getStates();
