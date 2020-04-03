@@ -28,8 +28,35 @@ export const Section = styled.div`
     font-size: 18px;
     color: #737380;
     line-height: 30px;
+    margin-bottom: 55px;
   }
-  section .Link {
-    color: black;
+`;
+export const ButtonsContainer = styled.div`
+  margin-top: 55px;
+
+
+  a {
+    color: #061a40;
+    display: flex;
+    position: relative;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    svg {
+      margin-right: 5px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 100%;
+
+      border-radius: 40px;
+      padding: 20px 0;
+    }
   }
 `;
