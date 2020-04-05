@@ -4,15 +4,13 @@ import '~/assets/css/normalize.css';
 // import '~/assets/css/responsive.css';
 
 export default createGlobalStyle`
-  * {
-    color: #fff; /* 373e40 */
-  }
-
   html {
     font-size: 62.5%;
   }
 
   body {
-    font: 1.6rem 'Roboto Condensed', sans-serif;
+    font: 1.6rem 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: #f0f0f5;
   }
 `;
