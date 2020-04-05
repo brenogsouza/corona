@@ -42,7 +42,6 @@ export const BackButton = styled.div`
 
   a {
     opacity: 0.8;
-    vertical-align: bottom;
     font-size: 2rem;
     font-weight: bold;
     color: #8a8889;

@@ -5,7 +5,7 @@ import Layout from '~/layouts/Information';
 
 import api from '~/services/api';
 
-import flag from '~/assets/img/br_flag.png';
+import BrazilFlagImage from '~/assets/img/br_flag.png';
 
 import {
   Container,
@@ -21,15 +21,14 @@ const BrazilPage = () => {
   const [loading, setLoading] = useState(true);
   const [status, setStatus] = useState({});
 
-  async function getBrazil() {
-    const response = await api.get('/brazil').then(r => r.data);
-
-    setStatus(response.data);
-
-    setLoading(false);
-  }
-
   useEffect(() => {
+    async function getBrazil() {
+      const { data } = await api.get('/brazil').then(r => r.data);
+
+      setStatus(data);
+      setLoading(false);
+    }
+
     getBrazil();
   }, []);
 
@@ -37,9 +36,11 @@ const BrazilPage = () => {
     <Layout loading={loading}>
       <Container>
         <HeaderSection>
-          <h1>
-            COVID-19 - BRASIL <img src={flag} alt="brasil" />
-          </h1>
+          <span>
+            <h1>COVID-19 - BRASIL</h1>
+            <img src={BrazilFlagImage} alt="Brazil Flag" />
+          </span>
+
           <p>Dados oficais e atualizados em tempo real.</p>
         </HeaderSection>
 
@@ -47,6 +48,7 @@ const BrazilPage = () => {
           <h1>{status.confirmed}</h1>
           <p>CONFIRMADOS</p>
         </GlobalCount>
+
         <Section>
           <ContentSection>
             <h1>{status.cases}</h1>
