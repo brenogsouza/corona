@@ -16,12 +16,15 @@ import {
 moment.locale('pt-br');
 
 const BrazilPage = () => {
+  const [loading, setLoading] = useState(true);
   const [status, setStatus] = useState({});
 
   async function getBrazil() {
     const response = await api.get('/brazil').then(r => r.data);
 
     setStatus(response.data);
+
+    setLoading(false);
   }
 
   useEffect(() => {
@@ -29,7 +32,7 @@ const BrazilPage = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout loading={loading}>
       <Container>
         <HeaderSection>
           <h1>COVID-19 - BRASIL</h1>
