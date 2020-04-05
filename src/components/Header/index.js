@@ -39,9 +39,6 @@ const HeaderComponent = () => {
           <li>
             <Link to="/news">Notícias</Link>
           </li>
-          <li>
-            <Link to="/state">Local</Link>
-          </li>
         </ul>
       </Navigation>
 
