@@ -3,9 +3,11 @@ import React from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
+import Spinner from '~/components/Spinner';
+
 import { Container, Header, HeaderCredits, Content } from './styles';
 
-const InformationLayout = ({ children }) => (
+const InformationLayout = ({ children, loading }) => (
   <Container>
     <Header>
       <Link to="/">
@@ -28,12 +30,17 @@ const InformationLayout = ({ children }) => (
       </HeaderCredits>
     </Header>
 
-    <Content>{children}</Content>
+    <Content>{loading ? <Spinner /> : children}</Content>
   </Container>
 );
 
 InformationLayout.propTypes = {
   children: PropTypes.element.isRequired,
+  loading: PropTypes.bool,
+};
+
+InformationLayout.defaultProps = {
+  loading: false,
 };
 
 export default InformationLayout;

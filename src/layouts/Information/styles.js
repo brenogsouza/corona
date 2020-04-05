@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 100vh;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const Header = styled.header`
@@ -29,5 +34,8 @@ export const HeaderCredits = styled.div`
 `;
 
 export const Content = styled.main`
-  flex: 1;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
 `;
