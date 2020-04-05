@@ -15,12 +15,14 @@ export const StatesContainer = styled.ul`
     width: 100%;
     padding: 20px 10px;
 
+    text-align: center;
     align-items: center;
     justify-content: center;
 
     font-size: 2rem;
     font-weight: 700;
 
+    color: #fff;
     background-color: rgba(72, 114, 199, 0.6);
     border-radius: 6px;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.15);

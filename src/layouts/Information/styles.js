@@ -15,6 +15,10 @@ export const Header = styled.header`
   padding: 0 40px;
   align-items: center;
   background-color: #0353a4;
+
+  * {
+    color: #fff;
+  }
 `;
 
 export const HeaderCredits = styled.div`

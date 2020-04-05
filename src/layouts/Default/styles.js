@@ -10,5 +10,8 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.main`
+  display: flex;
   flex-grow: 1;
+  align-items: center;
+  justify-content: center;
 `;
