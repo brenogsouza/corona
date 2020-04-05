@@ -10,5 +10,5 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.main`
-  flex: 1;
+  flex-grow: 1;
 `;
