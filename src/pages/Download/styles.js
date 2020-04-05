@@ -28,14 +28,19 @@ export const Section = styled.div`
     font-size: 18px;
     color: #737380;
     line-height: 30px;
-    margin-bottom: 55px;
+    margin-bottom: 10px;
+  }
+  a {
+    margin-top: 2px;
+    color: #0000ee;
   }
 `;
 export const ButtonsContainer = styled.div`
-  margin-top: 55px;
+  margin-top: 75px;
+
 
   a {
-    color: #061a40;
+    color: #8a8889;
     display: flex;
     position: relative;
 
@@ -47,15 +52,9 @@ export const ButtonsContainer = styled.div`
 
     svg {
       margin-right: 5px;
-    }
-    &:before {
-      content: '';
-      position: absolute;
-      width: 60%;
-      height: 100%;
-
-      border-radius: 40px;
-      padding: 20px 0;
+      * {
+        color: #f02645;
+      }
     }
   }
 `;

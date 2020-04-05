@@ -12,10 +12,12 @@ const DownloadPage = () => (
       <p>
         Baixe agora a versão móvel da nova plataforma do coronavírus e fique por
         dentro de todas informações na palma da sua mão!
+        <a href="/#"> Download via Google Drive.</a>
       </p>
+
       <ButtonsContainer>
         <Link to="/">
-          <FiArrowLeft color="#f04437" size={20} /> Voltar para o Início
+          <FiArrowLeft size={20} /> Voltar para o Início
         </Link>
       </ButtonsContainer>
     </Section>
