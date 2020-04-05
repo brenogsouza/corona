@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
-import BackgroundImage from '../../assets/img/bg2.jpg';
+import BackgroundImage from '~/assets/img/bg2.jpg';
 
 export const Container = styled.section`
   height: 100vh;
   width: 100%;
+
   text-align: center;
+
   background: linear-gradient(rgba(255, 255, 255, 0.1), rgb(0, 0, 0)),
     url(${BackgroundImage}) no-repeat;
   background-position: 50% 50%;
@@ -37,7 +39,7 @@ export const Content = styled.div`
   }
 `;
 
-export const ButtonsContainer = styled.div`
+export const ButtonContainer = styled.div`
   margin-top: 55px;
 
   a {

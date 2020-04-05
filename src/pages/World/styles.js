@@ -2,9 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  align-items: center;
-  display: block;
-  margin: auto;
 
   h3 {
     margin-top: 50px;
@@ -50,6 +47,7 @@ export const GlobalCount = styled.div`
     font-size: 10rem;
     color: black;
   }
+
   p {
     font-weight: bold;
     color: black;
