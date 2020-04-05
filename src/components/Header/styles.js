@@ -42,7 +42,7 @@ export const Input = styled.input`
   color: #000;
   transition: width 400ms;
 
-  width: ${(props) => (props.inSearch ? '100%' : '250px')};
+  width: ${props => (props.inSearch ? '100%' : '250px')};
 `;
 
 // Navbar Items
@@ -51,7 +51,7 @@ export const Navigation = styled.nav`
   margin: 0 15px;
   height: 100%;
 
-  display: ${(props) => (props.active ? 'flex' : 'none')};
+  display: ${props => (props.active ? 'flex' : 'none')};
 
   ul,
   li,

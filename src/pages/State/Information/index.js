@@ -16,7 +16,7 @@ const InformationStatePage = () => {
 
   useEffect(() => {
     async function getState() {
-      const data = await api.get(`brazil/uf/${uf}`).then((r) => r.data);
+      const data = await api.get(`brazil/uf/${uf}`).then(r => r.data);
 
       if (data.error) history.push('/state');
       else setState(data);
@@ -32,7 +32,7 @@ const InformationStatePage = () => {
           tickValues={[1, 2, 3]}
           tickFormat={['Suspeitas', 'Comfirmados', 'Mortes']}
         />
-        <VictoryAxis tickFormat={(x) => `$${x / 1000}k`} dependentAxis />
+        <VictoryAxis tickFormat={x => `$${x / 1000}k`} dependentAxis />
         <VictoryBar data={data} x="quarter" y="earnings" />
       </VictoryChart>
     </Layout>

@@ -12,7 +12,7 @@ const MyStatePage = () => {
 
   useEffect(() => {
     async function getStates() {
-      const { data } = await api.get('').then((r) => r.data);
+      const { data } = await api.get('').then(r => r.data);
 
       setStates(
         data.sort((a, b) =>
@@ -28,7 +28,7 @@ const MyStatePage = () => {
     <Layout>
       <Container>
         <StatesContainer>
-          {states.map((state) => (
+          {states.map(state => (
             <StateItem key={state.state}>
               <Link to={`/state/${state.uf}`}>
                 <span>{state.state}</span>
