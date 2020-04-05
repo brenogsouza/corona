@@ -30,6 +30,8 @@
   "dependencies": {
     "@rocketseat/unform": "^1.6.2",
     "axios": "^0.19.2",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.3.2",
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.5",
     "react-background-slider": "^2.0.0",

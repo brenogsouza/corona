@@ -37,6 +37,9 @@ const HeaderComponent = () => {
             <Link to="/world">Mundo</Link>
           </li>
           <li>
+            <Link to="/brazil">Brasil</Link>
+          </li>
+          <li>
             <Link to="/news">Notícias</Link>
           </li>
         </ul>
