@@ -1,23 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 1024px;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 800px;
+  margin: 40px auto;
 `;
 
 export const StatesContainer = styled.ul`
   display: grid;
   grid-gap: 40px;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 40px 0;
-`;
-
-export const StateItem = styled.li`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
 
   a {
     display: flex;
@@ -30,8 +21,9 @@ export const StateItem = styled.li`
     font-size: 2rem;
     font-weight: 700;
 
-    background-color: #061a40;
-    box-shadow: 0 6px 5px 0 rgba(0, 0, 0, 0.3);
+    background-color: rgba(72, 114, 199, 0.6);
+    border-radius: 6px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.15);
     transition: transform 200ms;
 
     img {
@@ -42,6 +34,7 @@ export const StateItem = styled.li`
 
     &:hover {
       transform: translateY(-5px);
+      box-shadow: 0 0 15px 5px rgba(72, 114, 199, 0.4);
     }
   }
 `;
