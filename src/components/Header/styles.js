@@ -19,6 +19,7 @@ export const Container = styled.header.attrs({
   a {
     font-size: 1.8rem;
     font-weight: 600;
+    color: #fff;
   }
 `;
 

@@ -45,15 +45,11 @@ export const BackButton = styled.div`
     vertical-align: bottom;
     font-size: 2rem;
     font-weight: bold;
-
-    &,
-    * {
-      color: #8a8889;
-    }
+    color: #8a8889;
 
     svg {
       vertical-align: middle;
-      margin-right: 5px;
+      margin-right: 6px;
     }
 
     &:hover {

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import BackgroundImage from '~/assets/img/bg2.jpg';
 
-export const Container = styled.section`
+export const Container = styled.div`
   height: 100vh;
   width: 100%;
 
@@ -15,7 +15,7 @@ export const Container = styled.section`
   background-attachment: fixed;
 `;
 
-export const Content = styled.div`
+export const Content = styled.section`
   display: flex;
   height: 100%;
   width: 100%;
@@ -52,6 +52,7 @@ export const ButtonContainer = styled.div`
 
     font-size: 2.2rem;
     font-weight: 600;
+    color: #fff;
 
     svg {
       margin-left: 6px;
