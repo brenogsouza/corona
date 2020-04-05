@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 
 const SpinnerComponent = () => <Container />;
 
-const spinner = keyframes`
+const spinnerAnimation = keyframes`
   0% {
     transform: rotate(0deg);
   }
@@ -22,7 +22,7 @@ const Container = styled.div`
   border-top: 3px solid #0353a4;
   border-left: 3px solid #0353a4;
 
-  animation: ${spinner} 1s linear infinite;
+  animation: ${spinnerAnimation} 1s linear infinite;
 `;
 
 export default SpinnerComponent;
