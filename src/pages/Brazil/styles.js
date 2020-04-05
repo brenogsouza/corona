@@ -11,6 +11,9 @@ export const Container = styled.div`
   p {
     color: black;
   }
+  .lastUpdate {
+    color: black;
+  }
 `;
 
 export const HeaderSection = styled.div`
@@ -22,6 +25,10 @@ export const HeaderSection = styled.div`
   h1 {
     font-size: 5.5rem;
     color: #727573;
+  }
+  img {
+    width: 50px;
+    height: 40px;
   }
 `;
 
@@ -38,8 +45,8 @@ export const Section = styled.div`
 `;
 export const GlobalCount = styled.div`
   width: 100%;
-  margin-top: 15px;
-  margin-bottom: 50px;
+  margin-top: 12px;
+  margin-bottom: 40px;
   text-align: center;
 
   justify-content: center;
@@ -47,24 +54,34 @@ export const GlobalCount = styled.div`
   align-items: center;
 
   h1 {
-    font-size: 10rem;
+    font-size: 12rem;
     color: black;
   }
 
   p {
     font-weight: bold;
-    color: black;
+    color: #1a7d1f;
+    font-size: 2rem;
   }
 `;
 
 export const ContentSection = styled.div`
   h1 {
-    font-size: 5.5rem;
+    font-size: 6.1rem;
     color: black;
   }
 
   p {
     font-weight: bold;
-    color: black;
+    color: #f2cb05;
+  }
+  .deaths {
+    color: #8a291e;
+  }
+  .suspect {
+    color: #deb616;
+  }
+  .recovered {
+    color: #1695de;
   }
 `;

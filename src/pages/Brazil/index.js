@@ -5,6 +5,8 @@ import Layout from '~/layouts/Information';
 
 import api from '~/services/api';
 
+import flag from '~/assets/img/br_flag.png';
+
 import {
   Container,
   HeaderSection,
@@ -35,7 +37,9 @@ const BrazilPage = () => {
     <Layout loading={loading}>
       <Container>
         <HeaderSection>
-          <h1>COVID-19 - BRASIL</h1>
+          <h1>
+            COVID-19 - BRASIL <img src={flag} alt="brasil" />
+          </h1>
           <p>Dados oficais e atualizados em tempo real.</p>
         </HeaderSection>
 
@@ -46,18 +50,20 @@ const BrazilPage = () => {
         <Section>
           <ContentSection>
             <h1>{status.cases}</h1>
-            <p>SUSPEITOS</p>
+            <p className="suspect">SUSPEITOS</p>
           </ContentSection>
           <ContentSection>
             <h1>{status.deaths}</h1>
-            <p>ÓBITOS</p>
+            <p className="deaths">ÓBITOS</p>
           </ContentSection>
           <ContentSection>
             <h1>{status.recovered}</h1>
-            <p>CURADOS</p>
+            <p className="recovered">CURADOS</p>
           </ContentSection>
         </Section>
-        <h3>Última Atualização: {moment(status.updated_at).format('L')}</h3>
+        <h3 className="lastUpdate">
+          Última Atualização: {moment(status.updated_at).format('L')}
+        </h3>
       </Container>
     </Layout>
   );
