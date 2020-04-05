@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
+import BrazilPage from '~/pages/Brazil';
 import DownloadPage from '~/pages/Download';
 import HomePage from '~/pages/Home';
 import NewsPage from '~/pages/News';
@@ -14,6 +15,7 @@ const Routes = () => (
       <Route path="/" component={HomePage} exact />
 
       <Route path="/world" component={WorldPage} />
+      <Route path="/brazil" component={BrazilPage} />
       <Route path="/state" component={StatePage} exact />
       <Route path="/state/:uf" component={InformationStatePage} />
 

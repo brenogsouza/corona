@@ -30,7 +30,7 @@ const InformationStatePage = () => {
       <VictoryChart domainPadding={20} theme={VictoryTheme.material}>
         <VictoryAxis
           tickValues={[1, 2, 3]}
-          tickFormat={['Suspeitas', 'Comfirmados', 'Mortes']}
+          tickFormat={['Suspeitos', 'Confirmados', 'Óbitos']}
         />
         <VictoryAxis tickFormat={x => `$${x / 1000}k`} dependentAxis />
         <VictoryBar data={data} x="quarter" y="earnings" />
