@@ -69,7 +69,7 @@ export const SearchIcon = styled.span`
 
 export const Input = styled.input`
   height: 60px;
-  padding-left: 10px;
+  padding: 0 10px;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   transition: width 400ms;
 
