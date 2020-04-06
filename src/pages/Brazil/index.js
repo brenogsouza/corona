@@ -23,7 +23,7 @@ const BrazilPage = () => {
 
   useEffect(() => {
     async function getBrazil() {
-      const { data } = await api.get('/brazil').then(r => r.data);
+      const { data } = await api.get('brazil').then(r => r.data);
 
       setStatus(data);
       setLoading(false);
@@ -31,6 +31,8 @@ const BrazilPage = () => {
 
     getBrazil();
   }, []);
+
+  if (loading) return <></>;
 
   return (
     <Layout loading={loading}>

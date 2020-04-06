@@ -15,16 +15,14 @@ const MyStatePage = () => {
     async function getStates() {
       const { data } = await api.get('').then(r => r.data);
 
-      setStates(
-        data.sort((a, b) =>
-          a.state > b.state ? 1 : b.state > a.state ? -1 : 0,
-        ),
-      );
+      setStates(data.sort((a, b) => a.state.localeCompare(b.state)));
       setLoading(false);
     }
 
     getStates();
   }, []);
+
+  if (loading) return <></>;
 
   return (
     <Layout loading={loading}>

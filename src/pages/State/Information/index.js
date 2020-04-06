@@ -19,8 +19,7 @@ const InformationStatePage = () => {
   const { uf } = useParams();
 
   const [loading, setLoading] = useState(true);
-
-  const [state, setState] = useState([]);
+  const [state, setState] = useState({});
 
   useEffect(() => {
     async function getState() {
@@ -34,6 +33,8 @@ const InformationStatePage = () => {
 
     getState();
   }, []);
+
+  if (loading) return <></>;
 
   return (
     <Layout loading={loading}>
