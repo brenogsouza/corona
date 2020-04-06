@@ -1,6 +1,6 @@
+import moment from 'moment';
 import React, { useEffect, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import moment from 'moment';
 
 import Layout from '~/layouts/Information';
 
@@ -17,6 +17,7 @@ import {
 const InformationStatePage = () => {
   const history = useHistory();
   const { uf } = useParams();
+
   const [loading, setLoading] = useState(true);
 
   const [state, setState] = useState([]);
