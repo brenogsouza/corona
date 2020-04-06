@@ -28,6 +28,9 @@ const WorldPage = () => {
           confirmed: data.reduce((a, b) => a + b.confirmed, 0),
           deaths: data.reduce((a, b) => a + b.deaths, 0),
           recovered: data.reduce((a, b) => a + b.recovered, 0),
+          updated_at: data
+            .map(c => Date.parse(c.updated_at))
+            .sort((a, b) => a - b)[0],
         },
       });
       setLoading(false);
@@ -65,7 +68,9 @@ const WorldPage = () => {
             <p>PESSOAS CURADAS</p>
           </ContentSection>
         </Section>
-
+        <h3 className="lastUpdate">
+          Última Atualização: {moment(status.info.updated_at).format('LLL')}
+        </h3>
         <h3 className="lastUpdate">SELECIONAR PAÍS (EM BREVE)</h3>
       </Container>
     </Layout>
