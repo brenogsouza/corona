@@ -17,6 +17,7 @@ import {
 const InformationStatePage = () => {
   const history = useHistory();
   const { uf } = useParams();
+
   const [loading, setLoading] = useState(true);
 
   const [state, setState] = useState([]);
