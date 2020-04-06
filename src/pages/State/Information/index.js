@@ -1,6 +1,6 @@
+import moment from 'moment';
 import React, { useEffect, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import moment from 'moment';
 
 import Layout from '~/layouts/Information';
 
@@ -51,7 +51,7 @@ const InformationStatePage = () => {
         </Header>
         <TotalCount>
           <h1>{state.cases}</h1>
-          <p>CONFIRMDOS</p>
+          <p>CONFIRMADOS</p>
         </TotalCount>
 
         <Section>
