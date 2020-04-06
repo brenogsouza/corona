@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 800px;
+  max-width: 1024px;
   margin: 40px auto;
 `;
 
@@ -37,6 +37,22 @@ export const StatesContainer = styled.ul`
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 0 15px 5px rgba(72, 114, 199, 0.4);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+
+    a {
+      width: 40vw;
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+
+    a {
+      width: 80vw;
     }
   }
 `;

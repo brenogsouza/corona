@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 
 import {
   Container,
+  ResponsiveContainer,
+  ResponsiveButton,
+  Content,
   SearchContainer,
   DownloadContainer,
   Navigation,
@@ -13,44 +16,54 @@ import {
 
 const HeaderComponent = () => {
   const [inSearch, setInSearch] = useState(false);
+  const [navbarOpen, setnavbarOpened] = useState(false);
 
   const inputFocus = () => setInSearch(!inSearch);
+  const handleNavigationButton = () => setnavbarOpened(!navbarOpen);
 
   return (
     <Container>
-      <SearchContainer>
-        <SearchIcon>
-          <FiSearch size={30} />
-        </SearchIcon>
+      <ResponsiveContainer>
+        <ResponsiveButton open={navbarOpen} onClick={handleNavigationButton}>
+          <span /> <span /> <span />
+        </ResponsiveButton>
+      </ResponsiveContainer>
 
-        <Input
-          inSearch={inSearch}
-          onFocus={inputFocus}
-          onBlur={inputFocus}
-          placeholder="Posso te ajudar ?"
-        />
-      </SearchContainer>
+      <Content open={navbarOpen}>
+        <SearchContainer>
+          <SearchIcon>
+            <FiSearch size={30} color="#000" />
+          </SearchIcon>
 
-      <Navigation active={!inSearch}>
-        <ul>
-          <li>
-            <Link to="/world">Mundo</Link>
-          </li>
-          <li>
-            <Link to="/brazil">Brasil</Link>
-          </li>
-          <li>
-            <Link to="/news">Notícias</Link>
-          </li>
-        </ul>
-      </Navigation>
+          <Input
+            inSearch={inSearch}
+            onFocus={inputFocus}
+            onBlur={inputFocus}
+            placeholder="Posso te ajudar ?"
+          />
+        </SearchContainer>
 
-      <DownloadContainer>
-        <Link to="/download">
-          Download App
-          <FiDownload size={20} />
-        </Link>
-      </DownloadContainer>
+        <Navigation active={!inSearch}>
+          <ul>
+            <li>
+              <Link to="/world">Mundo</Link>
+            </li>
+            <li>
+              <Link to="/brazil">Brasil</Link>
+            </li>
+            <li>
+              <Link to="/news">Notícias</Link>
+            </li>
+          </ul>
+        </Navigation>
+
+        <DownloadContainer>
+          <Link to="/download">
+            Download App
+            <FiDownload size={20} />
+          </Link>
+        </DownloadContainer>
+      </Content>
     </Container>
   );
 };

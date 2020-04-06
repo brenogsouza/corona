@@ -3,20 +3,15 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 40px auto;
 
   h3 {
     margin-top: 50px;
     text-align: center;
-    color: black;
-  }
-
-  p {
-    color: black;
   }
 
   .lastUpdate {
-    color: black;
+    color: #000;
   }
 `;
 
@@ -31,9 +26,8 @@ export const HeaderSection = styled.div`
     color: #727573;
   }
 
-  img {
-    width: 50px;
-    height: auto;
+  p {
+    color: #000;
   }
 
   span {
@@ -43,15 +37,20 @@ export const HeaderSection = styled.div`
 
     img {
       margin-left: 15px;
+      width: 50px;
+      height: auto;
     }
   }
-`;
 
-export const Section = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  text-align: center;
+  @media (max-width: 612px) {
+    p {
+      margin-top: 10px;
+    }
+
+    span {
+      flex-direction: column;
+    }
+  }
 `;
 
 export const GlobalCount = styled.div`
@@ -66,7 +65,7 @@ export const GlobalCount = styled.div`
 
   h1 {
     font-size: 12rem;
-    color: black;
+    color: #000;
   }
 
   p {
@@ -76,10 +75,23 @@ export const GlobalCount = styled.div`
   }
 `;
 
+export const Section = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 60px;
+    margin-top: 60px;
+  }
+`;
+
 export const ContentSection = styled.div`
   h1 {
     font-size: 6.1rem;
-    color: black;
+    color: #000;
   }
 
   p {

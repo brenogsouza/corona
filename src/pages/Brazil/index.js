@@ -15,7 +15,7 @@ import {
   ContentSection,
 } from './styles';
 
-moment.locale('pt-br');
+moment.locale('pt-BR');
 
 const BrazilPage = () => {
   const [loading, setLoading] = useState(true);
@@ -63,8 +63,9 @@ const BrazilPage = () => {
             <p className="recovered">CURADOS</p>
           </ContentSection>
         </Section>
+
         <h3 className="lastUpdate">
-          Última Atualização: {moment(status.updated_at).format('L')}
+          Última Atualização: {moment(status.updated_at).format('LLL')}
         </h3>
       </Container>
     </Layout>
