@@ -45,7 +45,7 @@ export const GlobalCount = styled.div`
 
   h1 {
     font-size: 10rem;
-    color: black;
+    color: #3baa1b;
   }
 
   p {
@@ -63,5 +63,14 @@ export const ContentSection = styled.div`
   p {
     font-weight: bold;
     color: black;
+  }
+  .suspect {
+    color: #eac822;
+  }
+  .deaths {
+    color: #d51616;
+  }
+  .recovered {
+    color: #1678d5;
   }
 `;

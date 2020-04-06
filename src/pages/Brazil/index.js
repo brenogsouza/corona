@@ -47,21 +47,21 @@ const BrazilPage = () => {
         </HeaderSection>
 
         <GlobalCount>
-          <h1>{status.confirmed}</h1>
+          <h1>{status.confirmed.toLocaleString()}</h1>
           <p>CONFIRMADOS</p>
         </GlobalCount>
 
         <Section>
           <ContentSection>
-            <h1>{status.cases}</h1>
+            <h1>{status.cases.toLocaleString()}</h1>
             <p className="suspect">SUSPEITOS</p>
           </ContentSection>
           <ContentSection>
-            <h1>{status.deaths}</h1>
+            <h1>{status.deaths.toLocaleString()}</h1>
             <p className="deaths">ÓBITOS</p>
           </ContentSection>
           <ContentSection>
-            <h1>{status.recovered}</h1>
+            <h1>{status.recovered.toLocaleString()}</h1>
             <p className="recovered">CURADOS</p>
           </ContentSection>
         </Section>

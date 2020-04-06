@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import moment from 'moment';
 
 import Layout from '~/layouts/Information';
 
@@ -41,28 +42,31 @@ const WorldPage = () => {
     <Layout loading={loading}>
       <Container>
         <HeaderSection>
-          <h1>COVID-19 - MUNDO</h1>
+          <h1>COVID NO MUNDO</h1>
         </HeaderSection>
 
         <GlobalCount>
           <h1>{status.info.confirmed.toLocaleString()}</h1>
-          <p>CONFIRMADOS</p>
+          <p>CASOS CONFIRMADOS</p>
         </GlobalCount>
         <Section>
           <ContentSection>
-            <h1>0</h1>
-            <p>SUSPEITOS</p>
+            <h1 className="suspect">{status.info.cases.toLocaleString()}</h1>
+            <p>CASOS SUSPEITOS</p>
           </ContentSection>
           <ContentSection>
-            <h1>0</h1>
-            <p>ÓBITOS</p>
+            <h1 className="deaths">{status.info.deaths.toLocaleString()}</h1>
+            <p>MORTES</p>
           </ContentSection>
           <ContentSection>
-            <h1>0</h1>
-            <p>CURADOS</p>
+            <h1 className="recovered">
+              {status.info.recovered.toLocaleString()}
+            </h1>
+            <p>PESSOAS CURADAS</p>
           </ContentSection>
         </Section>
-        <h3>Última Atualização: 0</h3>
+
+        <h3 className="lastUpdate">SELECIONAR PAÍS (EM BREVE)</h3>
       </Container>
     </Layout>
   );

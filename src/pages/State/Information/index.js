@@ -52,21 +52,21 @@ const InformationStatePage = () => {
           <p>{state.state} tem atualmente:</p>
         </Header>
         <TotalCount>
-          <h1>{state.cases}</h1>
+          <h1>{state.cases.toLocaleString()}</h1>
           <p>CONFIRMADOS</p>
         </TotalCount>
 
         <Section>
           <ContentSection>
-            <h1>{state.suspects}</h1>
+            <h1>{state.suspects.toLocaleString()}</h1>
             <p className="suspect">SUSPEITOS</p>
           </ContentSection>
           <ContentSection>
-            <h1>{state.deaths}</h1>
+            <h1>{state.deaths.toLocaleString()}</h1>
             <p className="deaths">ÓBITOS</p>
           </ContentSection>
           <ContentSection>
-            <h1>{state.refuses}</h1>
+            <h1>{state.refuses.toLocaleString()}</h1>
             <p className="recovered">CURADOS</p>
           </ContentSection>
         </Section>
