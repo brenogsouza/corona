@@ -20,8 +20,6 @@ export const Container = styled.header`
   }
 `;
 
-// rgba(0, 109, 170, 0.9)
-
 export const Content = styled.div`
   display: flex;
   width: 100%;
@@ -43,8 +41,6 @@ export const Content = styled.div`
     left: ${props => (props.open ? '0' : '-100%')};
   }
 `;
-
-// Search
 
 export const SearchContainer = styled.div`
   flex: 1;
@@ -83,8 +79,6 @@ export const Input = styled.input`
     }
   }
 `;
-
-// Navbar Items
 
 export const Navigation = styled.nav`
   margin: 0 15px;
@@ -156,8 +150,6 @@ export const Navigation = styled.nav`
   }
 `;
 
-// Download Button
-
 export const DownloadContainer = styled.div`
   margin-left: 30px;
 
@@ -202,14 +194,15 @@ export const ResponsiveContainer = styled.div`
 
 export const ResponsiveButton = styled.button`
   span {
+    position: relative;
     display: block;
-    height: 2px;
-    width: 40px;
+    height: 3px;
+    width: 24px;
     background-color: #fff;
     transition: transform 200ms ease-out;
 
     & + span {
-      margin-top: 10px;
+      margin-top: 6px;
     }
 
     ${props =>
@@ -219,6 +212,7 @@ export const ResponsiveButton = styled.button`
 
         &:nth-child(1) {
           transform: rotate(45deg);
+          top: 3px;
         }
 
         &:nth-child(2) {
