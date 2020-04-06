@@ -51,7 +51,7 @@ const InformationStatePage = () => {
         </Header>
         <TotalCount>
           <h1>{state.cases}</h1>
-          <p>CONFIRMDOS</p>
+          <p>CONFIRMADOS</p>
         </TotalCount>
 
         <Section>
