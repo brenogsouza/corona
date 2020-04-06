@@ -32,9 +32,7 @@ const InformationStatePage = () => {
     }
 
     getState();
-  }, []);
-
-  if (loading) return <></>;
+  }, [history, uf]);
 
   return (
     <Layout loading={loading}>

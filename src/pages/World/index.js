@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
 import moment from 'moment';
+import React, { useEffect, useState } from 'react';
 
 import Layout from '~/layouts/Information';
 
 import api from '~/services/api';
+import { objectLocaleString } from '~/utils';
 
 import {
   Container,
@@ -22,24 +23,21 @@ const WorldPage = () => {
       const { data } = await api.get('countries').then(r => r.data);
 
       setStatus({
-        countrys: data,
-        info: {
+        ...objectLocaleString({
           cases: data.reduce((a, b) => a + b.cases, 0),
           confirmed: data.reduce((a, b) => a + b.confirmed, 0),
           deaths: data.reduce((a, b) => a + b.deaths, 0),
           recovered: data.reduce((a, b) => a + b.recovered, 0),
-          updated_at: data
-            .map(c => Date.parse(c.updated_at))
-            .sort((a, b) => a - b)[0],
-        },
+        }),
+        updated_at: data
+          .map(c => Date.parse(c.updated_at))
+          .sort((a, b) => a - b)[0],
       });
       setLoading(false);
     }
 
     getWorldStatus();
   }, []);
-
-  if (loading) return <></>;
 
   return (
     <Layout loading={loading}>
@@ -49,27 +47,25 @@ const WorldPage = () => {
         </HeaderSection>
 
         <GlobalCount>
-          <h1>{status.info.confirmed.toLocaleString()}</h1>
+          <h1>{status.confirmed}</h1>
           <p>CASOS CONFIRMADOS</p>
         </GlobalCount>
         <Section>
           <ContentSection>
-            <h1 className="suspect">{status.info.cases.toLocaleString()}</h1>
+            <h1 className="suspect">{status.cases}</h1>
             <p>CASOS SUSPEITOS</p>
           </ContentSection>
           <ContentSection>
-            <h1 className="deaths">{status.info.deaths.toLocaleString()}</h1>
+            <h1 className="deaths">{status.deaths}</h1>
             <p>MORTES</p>
           </ContentSection>
           <ContentSection>
-            <h1 className="recovered">
-              {status.info.recovered.toLocaleString()}
-            </h1>
+            <h1 className="recovered">{status.recovered}</h1>
             <p>PESSOAS CURADAS</p>
           </ContentSection>
         </Section>
         <h3 className="lastUpdate">
-          Última Atualização: {moment(status.info.updated_at).format('LLL')}
+          Última Atualização: {moment(status.updated_at).format('LLL')}
         </h3>
         <h3 className="lastUpdate">SELECIONAR PAÍS (EM BREVE)</h3>
       </Container>

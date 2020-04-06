@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Layout from '~/layouts/Information';
 
 import api from '~/services/api';
+import { objectLocaleString } from '~/utils';
 
 import BrazilFlagImage from '~/assets/img/br_flag.png';
 
@@ -25,14 +26,12 @@ const BrazilPage = () => {
     async function getBrazil() {
       const { data } = await api.get('brazil').then(r => r.data);
 
-      setStatus(data);
+      setStatus(objectLocaleString(data));
       setLoading(false);
     }
 
     getBrazil();
   }, []);
-
-  if (loading) return <></>;
 
   return (
     <Layout loading={loading}>
@@ -47,21 +46,21 @@ const BrazilPage = () => {
         </HeaderSection>
 
         <GlobalCount>
-          <h1>{status.confirmed.toLocaleString()}</h1>
+          <h1>{status.confirmed}</h1>
           <p>CONFIRMADOS</p>
         </GlobalCount>
 
         <Section>
           <ContentSection>
-            <h1>{status.cases.toLocaleString()}</h1>
+            <h1>{status.cases}</h1>
             <p className="suspect">SUSPEITOS</p>
           </ContentSection>
           <ContentSection>
-            <h1>{status.deaths.toLocaleString()}</h1>
+            <h1>{status.deaths}</h1>
             <p className="deaths">ÓBITOS</p>
           </ContentSection>
           <ContentSection>
-            <h1>{status.recovered.toLocaleString()}</h1>
+            <h1>{status.recovered}</h1>
             <p className="recovered">CURADOS</p>
           </ContentSection>
         </Section>

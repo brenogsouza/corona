@@ -22,8 +22,6 @@ const MyStatePage = () => {
     getStates();
   }, []);
 
-  if (loading) return <></>;
-
   return (
     <Layout loading={loading}>
       <Container>
