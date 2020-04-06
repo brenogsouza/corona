@@ -3,13 +3,13 @@ import React from 'react';
 
 import Header from '~/components/Header';
 
-import { Container, Content } from './styles';
+import { Main } from './styles';
 
 const DefaulLayout = ({ children }) => (
-  <Container>
+  <>
     <Header />
-    <Content>{children}</Content>
-  </Container>
+    <Main>{children}</Main>
+  </>
 );
 
 DefaulLayout.propTypes = {

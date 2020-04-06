@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { FiArrowLeft } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+
+import { FiArrowLeft } from 'react-icons/fi';
 
 import Spinner from '~/components/Spinner';
 
-import { Container, Header, HeaderCredits, Content } from './styles';
+import { Header, HeaderCredits, Content } from './styles';
 
 const InformationLayout = ({ children, loading }) => (
-  <Container>
+  <>
     <Header>
       <Link to="/">
         <FiArrowLeft size={40} />
@@ -31,7 +32,7 @@ const InformationLayout = ({ children, loading }) => (
     </Header>
 
     <Content>{loading ? <Spinner /> : children}</Content>
-  </Container>
+  </>
 );
 
 InformationLayout.propTypes = {

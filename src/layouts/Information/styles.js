@@ -1,14 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-
-  flex-direction: column;
-  justify-content: space-between;
-`;
-
 export const Header = styled.header`
   display: flex;
   height: 80px;
@@ -39,7 +30,12 @@ export const HeaderCredits = styled.div`
 
 export const Content = styled.main`
   display: flex;
-  flex-grow: 1;
+  width: 100%;
+  min-height: calc(100vh - (80px + 80px));
+  max-width: 1024px;
+  margin: 40px auto;
+
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
