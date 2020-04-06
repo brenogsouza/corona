@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { FiSearch, FiDownload } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+
+import { FiSearch, FiDownload } from 'react-icons/fi';
 
 import {
   Container,

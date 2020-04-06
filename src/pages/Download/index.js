@@ -1,6 +1,7 @@
 import React from 'react';
-import { FiArrowLeft } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+
+import { FiArrowLeft } from 'react-icons/fi';
 
 import QRCodeImage from '~/assets/img/qrcode.png';
 
