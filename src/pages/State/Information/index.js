@@ -41,7 +41,7 @@ const InformationStatePage = () => {
       <List
         local={`${status.state} - ${status.uf}`}
         flag={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${status.uf}.png`}
-        lastUpdate={status.updated_at}
+        lastUpdate={status.datetime}
         info={status}
       />
     </Layout>

@@ -27,7 +27,7 @@ export const Header = styled.div`
 
     img {
       margin-left: 15px;
-      width: 50px;
+      width: 5rem;
       height: auto;
     }
   }
@@ -35,6 +35,11 @@ export const Header = styled.div`
   @media (max-width: 612px) {
     span {
       flex-direction: column;
+
+      img {
+        margin: 0;
+        margin-top: 6px;
+      }
     }
   }
 `;

@@ -7,6 +7,8 @@ import List from '~/components/List';
 import api from '~/services/api';
 import { objectLocaleString } from '~/utils';
 
+import WorldImage from '~/assets/img/world.png';
+
 const WorldPage = () => {
   const [loading, setLoading] = useState(true);
   const [status, setStatus] = useState({});
@@ -36,7 +38,7 @@ const WorldPage = () => {
     <Layout loading={loading}>
       <List
         local="Mundo"
-        // flag={BrazilFlagImage}
+        flag={WorldImage}
         lastUpdate={status.updated_at}
         info={status}
       />

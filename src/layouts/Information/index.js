@@ -12,7 +12,7 @@ const InformationLayout = ({ children, loading }) => (
   <>
     <Header>
       <Link to="/">
-        <FiArrowLeft size={40} />
+        <FiArrowLeft size="4rem" />
       </Link>
 
       <HeaderCredits>

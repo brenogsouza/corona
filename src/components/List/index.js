@@ -10,7 +10,7 @@ const ListComponent = ({ local, flag, info, lastUpdate }) => (
     <Header>
       <span>
         <h1>COVID-19 ({local})</h1>
-        <img src={flag} alt="Brazil Flag" />
+        <img src={flag} alt="Flag" />
       </span>
 
       <p>Dados oficais e atualizados em tempo real.</p>
@@ -48,15 +48,21 @@ const ListComponent = ({ local, flag, info, lastUpdate }) => (
 );
 
 ListComponent.propTypes = {
-  local: PropTypes.string.isRequired,
-  flag: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
-  lastUpdate: PropTypes.string.isRequired,
+  local: PropTypes.string,
+  flag: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  lastUpdate: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   info: PropTypes.shape({
     confirmed: PropTypes.string,
     cases: PropTypes.string,
     deaths: PropTypes.string,
     recovered: PropTypes.string,
   }).isRequired,
+};
+
+ListComponent.defaultProps = {
+  flag: 'Retrieving',
+  local: 'Retrieving',
+  lastUpdate: 0,
 };
 
 export default ListComponent;

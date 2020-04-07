@@ -10,6 +10,10 @@ export const Header = styled.header`
   * {
     color: #fff;
   }
+
+  @media (max-width: 612px) {
+    padding: 0 20px;
+  }
 `;
 
 export const HeaderCredits = styled.div`
