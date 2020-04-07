@@ -42,42 +42,6 @@ export const Content = styled.div`
   }
 `;
 
-export const SearchContainer = styled.div`
-  flex: 1;
-  display: flex;
-  height: 60px;
-  align-items: center;
-
-  @media (max-width: 1024px) {
-    flex: 0;
-  }
-`;
-
-export const SearchIcon = styled.span`
-  display: flex;
-  height: 60px;
-  width: 60px;
-
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-`;
-
-export const Input = styled.input`
-  height: 60px;
-  padding: 0 10px;
-  transition: width 400ms;
-
-  @media (min-width: 1025px) {
-    width: ${props => (props.inSearch ? 'calc(100% - 120px)' : '250px')};
-
-    :focus {
-      box-sizing: content-box;
-      box-shadow: 0 2px 15px 3px rgba(255, 255, 255, 0.3);
-    }
-  }
-`;
-
 export const Navigation = styled.nav`
   margin: 0 15px;
   height: 100%;
@@ -114,8 +78,6 @@ export const Navigation = styled.nav`
   }
 
   @media (min-width: 1025px) {
-    display: ${props => (props.active ? 'flex' : 'none')};
-
     li a {
       &:hover:before {
         width: 100%;
@@ -124,8 +86,6 @@ export const Navigation = styled.nav`
   }
 
   @media (max-width: 1024px) {
-    margin: 40px 0;
-
     &,
     ul,
     li,
@@ -171,10 +131,9 @@ export const DownloadContainer = styled.div`
 
   @media (max-width: 1024px) {
     margin: 0;
+    margin-top: 40px;
   }
 `;
-
-// Responsive
 
 export const ResponsiveContainer = styled.div`
   display: none;

@@ -5,7 +5,9 @@ import Layout from '~/layouts/Information';
 import List from '~/components/List';
 
 import api from '~/services/api';
+
 import { objectLocaleString } from '~/utils';
+import { WorldMeta } from '~/utils/Metas';
 
 import WorldImage from '~/assets/img/world.png';
 
@@ -35,14 +37,18 @@ const WorldPage = () => {
   }, []);
 
   return (
-    <Layout loading={loading}>
-      <List
-        local="Mundo"
-        flag={WorldImage}
-        lastUpdate={status.updated_at}
-        info={status}
-      />
-    </Layout>
+    <>
+      <WorldMeta />
+
+      <Layout loading={loading}>
+        <List
+          local="Mundo"
+          flag={WorldImage}
+          lastUpdate={status.updated_at}
+          info={status}
+        />
+      </Layout>
+    </>
   );
 };
 
