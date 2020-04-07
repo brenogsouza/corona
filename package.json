@@ -1,12 +1,12 @@
 {
   "name": "corona",
   "version": "0.1.0",
+  "main": "server.js",
   "private": true,
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "eject": "react-scripts eject",
+    "production": "node server.js",
     "lint": "eslint src --ext .js,.jsx",
     "lint:fix": "eslint src --ext .js,.jsx --fix",
     "prettier": "prettier --check src/**/*.{js,jsx}",
@@ -30,6 +30,7 @@
   "dependencies": {
     "@rocketseat/unform": "^1.6.2",
     "axios": "^0.19.2",
+    "express": "^4.17.1",
     "moment": "^2.24.0",
     "moment-duration-format": "^2.3.2",
     "react": "^16.13.1",
