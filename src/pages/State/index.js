@@ -5,7 +5,7 @@ import Layout from '~/layouts/Information';
 
 import api from '~/services/api';
 
-import { Container, StatesContainer } from './styles';
+import { Container } from './styles';
 
 const MyStatePage = () => {
   const [loading, setLoading] = useState(true);
@@ -25,17 +25,15 @@ const MyStatePage = () => {
   return (
     <Layout loading={loading}>
       <Container>
-        <StatesContainer>
-          {states.map(state => (
-            <Link key={state.state} to={`/state/${state.uf}`}>
-              <span>{state.state}</span>
-              <img
-                src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
-                alt={state.state}
-              />
-            </Link>
-          ))}
-        </StatesContainer>
+        {states.map(state => (
+          <Link key={state.state} to={`/state/${state.uf}`}>
+            <span>{state.state}</span>
+            <img
+              src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
+              alt={state.state}
+            />
+          </Link>
+        ))}
       </Container>
     </Layout>
   );

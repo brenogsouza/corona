@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  max-width: 1024px;
-  margin: 40px auto;
-`;
-
-export const StatesContainer = styled.ul`
+export const Container = styled.ul`
   display: grid;
   grid-gap: 40px;
   grid-template-columns: repeat(3, 1fr);
