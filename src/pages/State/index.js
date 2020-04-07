@@ -7,7 +7,7 @@ import api from '~/services/api';
 
 import { Container } from './styles';
 
-const MyStatePage = () => {
+const StatePage = () => {
   const [loading, setLoading] = useState(true);
   const [states, setStates] = useState([]);
 
@@ -39,4 +39,4 @@ const MyStatePage = () => {
   );
 };
 
-export default MyStatePage;
+export default StatePage;
