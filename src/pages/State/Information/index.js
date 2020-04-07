@@ -1,77 +1,51 @@
-import moment from 'moment';
 import React, { useEffect, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 
 import Layout from '~/layouts/Information';
 
-import api from '~/services/api';
+import List from '~/components/List';
 
-import {
-  Container,
-  Header,
-  TotalCount,
-  Section,
-  ContentSection,
-} from './styles';
+import api from '~/services/api';
+import { objectLocaleString } from '~/utils';
 
 const InformationStatePage = () => {
   const history = useHistory();
   const { uf } = useParams();
 
   const [loading, setLoading] = useState(true);
-  const [state, setState] = useState({});
+  const [status, setStatus] = useState({});
 
   useEffect(() => {
     async function getState() {
       const data = await api.get(`brazil/uf/${uf}`).then(r => r.data);
 
-      if (data.error) history.push('/state');
-      else setState(data);
-
-      setLoading(false);
+      if (!data.error) {
+        setStatus(
+          objectLocaleString({
+            ...data,
+            cases: data.suspects,
+            confirmed: data.cases,
+          }),
+        );
+        setLoading(false);
+      } else {
+        history.push('/state');
+      }
     }
 
     getState();
   }, [history, uf]);
 
+  console.log(status);
+
   return (
     <Layout loading={loading}>
-      <Container>
-        <Header>
-          <span>
-            <h1>
-              {state.state} - {state.uf}
-              <img
-                src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
-                alt={state.state}
-              />
-            </h1>
-          </span>
-          <p>{state.state} tem atualmente:</p>
-        </Header>
-        <TotalCount>
-          <h1>{state.cases.toLocaleString()}</h1>
-          <p>CONFIRMADOS</p>
-        </TotalCount>
-
-        <Section>
-          <ContentSection>
-            <h1>{state.suspects.toLocaleString()}</h1>
-            <p className="suspect">SUSPEITOS</p>
-          </ContentSection>
-          <ContentSection>
-            <h1>{state.deaths.toLocaleString()}</h1>
-            <p className="deaths">ÓBITOS</p>
-          </ContentSection>
-          <ContentSection>
-            <h1>{state.refuses.toLocaleString()}</h1>
-            <p className="recovered">CURADOS</p>
-          </ContentSection>
-        </Section>
-        <h3 className="lastUpdate">
-          Última Atualização: {moment(state.updated_at).format('LLL')}
-        </h3>
-      </Container>
+      <List
+        local={`${status.state} - ${status.uf}`}
+        flag={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${status.uf}.png`}
+        lastUpdate={status.updated_at}
+        info={status}
+      />
     </Layout>
   );
 };
