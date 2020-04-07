@@ -33,7 +33,7 @@ export const Content = styled.div`
     top: 60px;
     height: calc(100vh - 60px);
 
-    background-color: rgba(0, 109, 170, 0.9);
+    background-color: #006daa;
     flex-direction: column;
     justify-content: center;
     transition: left 300ms;
@@ -183,7 +183,7 @@ export const ResponsiveContainer = styled.div`
   padding: 0 20px;
 
   align-items: center;
-  background-color: rgba(0, 109, 170, 0.9);
+  background-color: #006daa;
 
   @media (max-width: 1024px) {
     display: flex;
