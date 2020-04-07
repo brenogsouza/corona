@@ -66,16 +66,14 @@ export const SearchIcon = styled.span`
 export const Input = styled.input`
   height: 60px;
   padding: 0 10px;
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
   transition: width 400ms;
 
   @media (min-width: 1025px) {
-    width: ${props => (props.inSearch ? 'calc(100% - 68px)' : '250px')};
+    width: ${props => (props.inSearch ? 'calc(100% - 120px)' : '250px')};
 
     :focus {
       box-sizing: content-box;
-      border: 2px solid rgba(0, 109, 170, 0.4);
-      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+      box-shadow: 0 2px 15px 3px rgba(255, 255, 255, 0.3);
     }
   }
 `;
