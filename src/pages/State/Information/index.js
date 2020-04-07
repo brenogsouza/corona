@@ -36,8 +36,6 @@ const InformationStatePage = () => {
     getState();
   }, [history, uf]);
 
-  console.log(status);
-
   return (
     <Layout loading={loading}>
       <List
