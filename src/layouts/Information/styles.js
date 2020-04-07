@@ -33,7 +33,7 @@ export const Content = styled.main`
   width: 100%;
   min-height: calc(100vh - (80px + 80px));
   max-width: 1024px;
-  margin: 40px auto;
+  margin: 35px auto;
 
   flex-direction: column;
   align-items: center;
