@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import MetaTags from 'react-meta-tags';
 
 export const HomeMeta = () => (
-  <Helmet>
+  <MetaTags>
     <meta name="robots" content="index,follow" />
     <meta property="og:title" content="Covid Agora" />
     <meta
@@ -12,11 +12,11 @@ export const HomeMeta = () => (
     />
 
     <title>Covid Agora | Início</title>
-  </Helmet>
+  </MetaTags>
 );
 
 export const WorldMeta = () => (
-  <Helmet>
+  <MetaTags>
     <meta property="og:title" content="Covid Agora - Mundo" />
     <meta
       property="og:description"
@@ -24,11 +24,11 @@ export const WorldMeta = () => (
     />
 
     <title>Covid Agora | Mundo</title>
-  </Helmet>
+  </MetaTags>
 );
 
 export const BrazilMeta = () => (
-  <Helmet>
+  <MetaTags>
     <meta property="og:title" content="Covid Agora - Brasil" />
     <meta
       property="og:description"
@@ -36,11 +36,11 @@ export const BrazilMeta = () => (
     />
 
     <title>Covid Agora | Brasil</title>
-  </Helmet>
+  </MetaTags>
 );
 
 export const StatesMeta = () => (
-  <Helmet>
+  <MetaTags>
     <meta property="og:title" content="Covid Agora - Selecionar estado" />
     <meta
       property="og:description"
@@ -48,11 +48,11 @@ export const StatesMeta = () => (
     />
 
     <title>Covid Agora | Estados</title>
-  </Helmet>
+  </MetaTags>
 );
 
 export const StateInformation = ({ state }) => (
-  <Helmet>
+  <MetaTags>
     <meta property="og:title" content={`Covid Agora - ${state}`} />
     <meta
       property="og:description"
@@ -60,7 +60,7 @@ export const StateInformation = ({ state }) => (
     />
 
     <title>{`Covid Agora | ${state}`}</title>
-  </Helmet>
+  </MetaTags>
 );
 
 StateInformation.propTypes = {
