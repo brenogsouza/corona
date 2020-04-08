@@ -2,9 +2,20 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import MetaTags from 'react-meta-tags';
 
-export const HomeMeta = () => (
+const Meta = ({ children }) => (
   <MetaTags>
+    <meta property="og:image" content="https://nowcovid.tk/img/icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Covid Agora" />
+
+    {children}
+  </MetaTags>
+);
+
+export const HomeMeta = () => (
+  <Meta>
     <meta name="robots" content="index,follow" />
+    <meta property="og:url" content="https://nowcovid.tk/" />
     <meta property="og:title" content="Covid Agora" />
     <meta
       property="og:description"
@@ -12,11 +23,12 @@ export const HomeMeta = () => (
     />
 
     <title>Covid Agora | Início</title>
-  </MetaTags>
+  </Meta>
 );
 
 export const WorldMeta = () => (
-  <MetaTags>
+  <Meta>
+    <meta property="og:url" content="https://nowcovid.tk/world" />
     <meta property="og:title" content="Covid Agora - Mundo" />
     <meta
       property="og:description"
@@ -24,11 +36,12 @@ export const WorldMeta = () => (
     />
 
     <title>Covid Agora | Mundo</title>
-  </MetaTags>
+  </Meta>
 );
 
 export const BrazilMeta = () => (
-  <MetaTags>
+  <Meta>
+    <meta property="og:url" content="https://nowcovid.tk/brazil" />
     <meta property="og:title" content="Covid Agora - Brasil" />
     <meta
       property="og:description"
@@ -36,11 +49,12 @@ export const BrazilMeta = () => (
     />
 
     <title>Covid Agora | Brasil</title>
-  </MetaTags>
+  </Meta>
 );
 
 export const StatesMeta = () => (
-  <MetaTags>
+  <Meta>
+    <meta property="og:url" content="https://nowcovid.tk/states" />
     <meta property="og:title" content="Covid Agora - Selecionar estado" />
     <meta
       property="og:description"
@@ -48,11 +62,12 @@ export const StatesMeta = () => (
     />
 
     <title>Covid Agora | Estados</title>
-  </MetaTags>
+  </Meta>
 );
 
 export const StateInformation = ({ state }) => (
-  <MetaTags>
+  <Meta>
+    <meta property="og:url" content={`https://nowcovid.tk/states/${state}`} />
     <meta property="og:title" content={`Covid Agora - ${state}`} />
     <meta
       property="og:description"
@@ -60,8 +75,12 @@ export const StateInformation = ({ state }) => (
     />
 
     <title>{`Covid Agora | ${state}`}</title>
-  </MetaTags>
+  </Meta>
 );
+
+Meta.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 StateInformation.propTypes = {
   state: PropTypes.string,
