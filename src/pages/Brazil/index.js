@@ -27,16 +27,18 @@ const BrazilPage = () => {
   }, []);
 
   return (
-    <Layout loading={loading}>
+    <>
       <BrazilMeta />
 
-      <List
-        local="Brazil"
-        flag={BrazilFlagImage}
-        lastUpdate={status.updated_at}
-        info={status}
-      />
-    </Layout>
+      <Layout loading={loading}>
+        <List
+          local="Brazil"
+          flag={BrazilFlagImage}
+          lastUpdate={status.updated_at}
+          info={status}
+        />
+      </Layout>
+    </>
   );
 };
 

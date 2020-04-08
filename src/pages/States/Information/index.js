@@ -39,16 +39,18 @@ const InformationStatePage = () => {
   }, [history, uf]);
 
   return (
-    <Layout loading={loading}>
+    <>
       <StateInformation state={status.state} />
 
-      <List
-        local={`${status.state} - ${status.uf}`}
-        flag={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${status.uf}.png`}
-        lastUpdate={status.datetime}
-        info={status}
-      />
-    </Layout>
+      <Layout loading={loading}>
+        <List
+          local={`${status.state} - ${status.uf}`}
+          flag={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${status.uf}.png`}
+          lastUpdate={status.datetime}
+          info={status}
+        />
+      </Layout>
+    </>
   );
 };
 

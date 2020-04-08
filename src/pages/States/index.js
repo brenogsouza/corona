@@ -25,21 +25,23 @@ const StatePage = () => {
   }, []);
 
   return (
-    <Layout loading={loading}>
+    <>
       <StatesMeta />
 
-      <Container>
-        {states.map(state => (
-          <Link key={state.state} to={`/states/${state.uf}`}>
-            <span>{state.state}</span>
-            <img
-              src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
-              alt={state.state}
-            />
-          </Link>
-        ))}
-      </Container>
-    </Layout>
+      <Layout loading={loading}>
+        <Container>
+          {states.map(state => (
+            <Link key={state.state} to={`/states/${state.uf}`}>
+              <span>{state.state}</span>
+              <img
+                src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
+                alt={state.state}
+              />
+            </Link>
+          ))}
+        </Container>
+      </Layout>
+    </>
   );
 };
 

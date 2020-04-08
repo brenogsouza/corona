@@ -37,16 +37,18 @@ const WorldPage = () => {
   }, []);
 
   return (
-    <Layout loading={loading}>
+    <>
       <WorldMeta />
 
-      <List
-        local="Mundo"
-        flag={WorldImage}
-        lastUpdate={status.updated_at}
-        info={status}
-      />
-    </Layout>
+      <Layout loading={loading}>
+        <List
+          local="Mundo"
+          flag={WorldImage}
+          lastUpdate={status.updated_at}
+          info={status}
+        />
+      </Layout>
+    </>
   );
 };
 

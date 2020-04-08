@@ -11,7 +11,7 @@ export const HomeMeta = () => (
       content="Informações sobre o coronavírus do Brasil e do mundo."
     />
 
-    <title>Covid Agora | Home</title>
+    <title>Covid Agora | Início</title>
   </Helmet>
 );
 
