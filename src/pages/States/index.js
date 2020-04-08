@@ -5,6 +5,8 @@ import Layout from '~/layouts/Information';
 
 import api from '~/services/api';
 
+import { StatesMeta } from '~/utils/Metas';
+
 import { Container } from './styles';
 
 const StatePage = () => {
@@ -24,9 +26,11 @@ const StatePage = () => {
 
   return (
     <Layout loading={loading}>
+      <StatesMeta />
+
       <Container>
         {states.map(state => (
-          <Link key={state.state} to={`/state/${state.uf}`}>
+          <Link key={state.state} to={`/states/${state.uf}`}>
             <span>{state.state}</span>
             <img
               src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}

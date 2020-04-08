@@ -5,7 +5,9 @@ import Layout from '~/layouts/Information';
 import List from '~/components/List';
 
 import api from '~/services/api';
+
 import { objectLocaleString } from '~/utils';
+import { WorldMeta } from '~/utils/Metas';
 
 import WorldImage from '~/assets/img/world.png';
 
@@ -36,6 +38,8 @@ const WorldPage = () => {
 
   return (
     <Layout loading={loading}>
+      <WorldMeta />
+
       <List
         local="Mundo"
         flag={WorldImage}

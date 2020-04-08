@@ -6,7 +6,9 @@ import Layout from '~/layouts/Information';
 import List from '~/components/List';
 
 import api from '~/services/api';
+
 import { objectLocaleString } from '~/utils';
+import { StateInformation } from '~/utils/Metas';
 
 const InformationStatePage = () => {
   const history = useHistory();
@@ -29,7 +31,7 @@ const InformationStatePage = () => {
         );
         setLoading(false);
       } else {
-        history.push('/state');
+        history.push('/states');
       }
     }
 
@@ -38,6 +40,8 @@ const InformationStatePage = () => {
 
   return (
     <Layout loading={loading}>
+      <StateInformation state={status.state} />
+
       <List
         local={`${status.state} - ${status.uf}`}
         flag={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${status.uf}.png`}

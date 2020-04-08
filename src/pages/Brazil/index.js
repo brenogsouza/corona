@@ -5,7 +5,9 @@ import Layout from '~/layouts/Information';
 import List from '~/components/List';
 
 import api from '~/services/api';
+
 import { objectLocaleString } from '~/utils';
+import { BrazilMeta } from '~/utils/Metas';
 
 import BrazilFlagImage from '~/assets/img/br_flag.png';
 
@@ -26,6 +28,8 @@ const BrazilPage = () => {
 
   return (
     <Layout loading={loading}>
+      <BrazilMeta />
+
       <List
         local="Brazil"
         flag={BrazilFlagImage}

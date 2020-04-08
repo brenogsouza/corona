@@ -5,17 +5,21 @@ import { FiArrowRight } from 'react-icons/fi';
 
 import Layout from '~/layouts/Default';
 
+import { HomeMeta } from '~/utils/Metas';
+
 import { Container, Content, ButtonContainer } from './styles';
 
 const HomePage = () => (
   <Layout>
+    <HomeMeta />
+
     <Container>
       <Content>
         <h1>CORONAVÍRUS</h1>
         <span>COVID-19</span>
 
         <ButtonContainer>
-          <Link to="/state">
+          <Link to="/states">
             Selecionar Estado <FiArrowRight size={30} />
           </Link>
         </ButtonContainer>
