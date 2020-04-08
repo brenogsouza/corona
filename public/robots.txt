@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+#Remove qualquer endereço que contenha [ busca interna]
+Disallow: /*/*?s=*
+
+#Sitemap
+Sitemap: https://nowcovid.tk/sitemap.xml
